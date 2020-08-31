@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Веб студия. Главная</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+    <!-- параметр - fallback - заменен параметром swap в линке на гугл фонт.-->
+    <!-- link rel="stylesheet" href="./css/normalize.css" /   -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <!-- Шапка страницы -->
+    <div class="container">
+      <header>
+        <!-- site-nav - Главная навигация -->
+        <nav class="parents-btn">
+          <!-- logo Логотип, всегда ссылка -->
+          <a href="/" lang="en" class="logo"
+            >Web<span class="logo-black">Studio</span>
+          </a>
+          <!-- site-nav - Ссылки на другие страницы или разделы текущей -->
+          <ul class="site-nav list middle-topline">
+            <li class="li-site-nav">
+              <a href="./index.html" class="link current">Студия</a>
+            </li>
+            <li class="li-site-nav">
+              <a href="./html/portfolio.html" class="link">Портфолио</a>
+            </li>
+            <li class="li-site-nav">
+              <a href="/" class="link">Контакты</a>
+            </li>
+          </ul>
+          <!-- aus-nav, Contats -->
+          <ul class="aus-nav list edge-topline">
+            <li class="li-aus-nav">
+              <a href="mailto:info@devstudio.com" class="link"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="li-aus-nav">
+              <a href="tel:+380961111111" class="link">+38 (096) 111-11-11</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <!-- Уникальный контент страницы -->
+    <main>
+      <!-- Hero - Секция главная -->
+      <section class="hero">
+        <!--*розташування дає різницю*/-->
+        <h1 class="hero-title">
+          ЭФФЕКТИВНЫЕ РЕШЕНИЯ<br />
+          ДЛЯ ВАШЕГО БИЗНЕСА
+        </h1>
+        <!-- order - Отображение кнопки  или-->
+        <!-- service - Указываем ссыпку -->
+        <a href="" class="button">Заказать услугу</a>
+      </section>
+      <!-- section advantage  - Секция преимуществ -->
+      <div class="container">
+        <section class="advntg">
+          <ul class="list ul-advantage">
+            <li class="li-advantage">
+              <h3 class="advantage-title">ВНИМАНИЕ К ДЕТАЛЯМ</h3>
+              <p>
+                Идейные соображения, а также начало повседневной работы по
+                формированию позиции.
+              </p>
+            </li>
+            <li class="li-advantage">
+              <h3 class="advantage-title">ПУНКТУАЛЬНОСТЬ</h3>
+              <p>
+                Задача организации, в особенности же рамки и место обучения
+                кадров влечет за собой.
+              </p>
+            </li>
+            <li class="li-advantage">
+              <h3 class="advantage-title">ПЛАНИРОВАНИЕ</h3>
+              <p>
+                Равным образом консультация с широким активом в значительной
+                степени обуславливает.
+              </p>
+            </li>
+            <li class="li-advantage">
+              <h3 class="advantage-title">СОВРЕМЕННЫЕ ТЕХНОЛОГИИ</h3>
+              <p>
+                Значимость этих прблем настолько очевидна, что реализация
+                плановых заданий.
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <!-- section work -->
+      <div class="container">
+        <section class="section-work">
+          <h2 class="section-title">Чем мы занимаемся</h2>
+          <ul class="list lu-work">
+            <li class="li-work img">
+              <img
+                src="../images/21.jpg"
+                alt="Программист за работой, использует планшет, рукопись, набирая команды на клавиатуре."
+                width="370"
+              />
+            </li>
+            <li class="li-work img">
+              <img
+                src="../images/22.jpg"
+                alt="Человек держит в руках айфон и работает на ноутбуке."
+                width="370"
+              />
+            </li>
+            <li class="li-work img">
+              <img
+                src="../images/23.jpg"
+                alt="Дизайнер держит в руках планшет и выбирает цвет из изображенной палитры цветов."
+                width="370"
+              />
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- section staff -->
+      <section class="section-staff">
+        <div class="container">
+          <!--*розташування дає різницю*/-->
+          <h2 class="section-title">Наша команда</h2>
+          <ul class="list lu-staff">
+            <li class="li-staff outline-staff img">
+              <img
+                src="../images/31.jpg"
+                alt="Фотография Игоря Демяненко Product Designer."
+                width="270"
+              />
+              <h3 class="staff-title">Игорь Демяненко</h3>
+              <h4>Product Designer</h4>
+            </li>
+            <li class="li-staff outline-staff img">
+              <img
+                src="../images/32.jpg"
+                alt="Фотография Ольги Репиной Frontend Developer."
+                width="270"
+              />
+              <h3 class="staff-title">Ольга Репина</h3>
+              <h4>Frontend Developer</h4>
+            </li>
+            <li class="li-staff outline-staff img">
+              <img
+                src="../images/33.jpg"
+                alt="Фотография Николая Тарасова Marketing."
+                width="270"
+              />
+              <h3 class="staff-title">Николай Тарасов</h3>
+              <h4>Marketing</h4>
+            </li>
+            <li class="li-staff outline-staff img">
+              <img
+                src="../images/34.jpg"
+                alt="Фотография Михаила Ермакова UI Designer."
+                width="270"
+              />
+              <h3 class="staff-title">Михаил Ермаков</h3>
+              <h4>UI Designer</h4>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+     <div class="container">
+      <section class="section-clients">
+        <h2 class="section-title">Постоянные клиенты</h2>
+        <ul class="list lu-clients">
+  
+  <li class="list-item icon-delivery">
+    <h2 class="title">fdgfhgggg</h2>
+    <p class="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+      voluptates sapiente veritatis maiores, corrupti incidunt hic alias aut
+      adipisci praesentium.
+    </p>
+  </li>
+  <li class="list-item icon-mobile">
+    <h2 class="title">fdgfhgggg</h2>
+    <p class="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+      voluptates sapiente veritatis maiores, corrupti incidunt hic alias aut
+      adipisci praesentium.
+    </p>
+  </li>
+
+          </li>
+        </ul>
+       </div>
+      </section>
+    </main>
+
+    <!-- Подвал страницы -->
+    <footer>
+      <div class="container">
+        <!--*розташування дає різницю*/-->
+        <!-- Логотип, всегда ссылка -->
+        <!--href="./index.html" lang="en" class="logo"-->
+        <a href="/" lang="en" class="logo"
+          >Web<span class="logo-white">Studio</span></a
+        >
+        <!-- Адрес и контакты -->
+        <address class="adr">
+          Киев, пр-т Леси Украинки,26
+          <a href="mailto:info@exempl.com" class="aus-footer"
+            >info@exempl.com</a
+          >
+          <a href="tel:+380961111111" class="aus-footer">+38 (096) 111-11-11</a>
+        </address>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!-- абсолютные пути
+                  <img src="https://www.figma.com/file/VQ02IIL57fc33U4GP1WEdf/Web-Studio-Version-2.0?node-id=1572%3A136"
+                
+                  <img src="https://www.figma.com/file/VQ02IIL57fc33U4GP1WEdf/Web-Studio-Version-2.0?node-id=1572%3A141"
+             
+                  <img src="https://www.figma.com/file/VQ02IIL57fc33U4GP1WEdf/Web-Studio-Version-2.0?node-id=1572%3A146"
+    
+                  <img src="https://www.figma.com/file/VQ02IIL57fc33U4GP1WEdf/Web-Studio-Version-2.0?node-id=1572%3A155"
+                  
+                  <img src="https://www.figma.com/file/VQ02IIL57fc33U4GP1WEdf/Web-Studio-Version-2.0?node-id=1572%3A183"
+               
+                  <img src="https://www.figma.com/file/VQ02IIL57fc33U4GP1WEdf/Web-Studio-Version-2.0?node-id=1572%3A211"
+               
+                  <img src="https://www.figma.com/file/VQ02IIL57fc33U4GP1WEdf/Web-Studio-Version-2.0?node-id=1572%3A239"  -->

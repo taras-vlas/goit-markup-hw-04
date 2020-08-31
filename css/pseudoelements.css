@@ -1,0 +1,118 @@
+.button {
+    display: inline-flex;
+    padding: 10px 20px;
+    border-radius: ;
+    background-color: teal ;
+    color: aliceblue;
+    text-decoration: none;
+    cursor: pointer:
+}
+
+.button:hover
+.button:focus{
+background-color: chocolate;
+}
+/**псевдоелемент**/
+.button::before{   /** .button::after { **/
+     /*  content: 'hghjfj' ;   *обовязкова властивысть псевдоелемента, для йоно створення досить залишити пустим*
+    color: red;  */
+   content: '' ;   /*обовязкова властивысть псевдоелемента, для йоно створення досить залишити пустим*/
+    width: ;
+    height: ;    
+    margin-right: ;  /** margin-left: ; **/
+    align-self: flex-end; /*поставити нижче */
+    background-color: red; 
+    background-image: url("../images/"); /*фонове зображення*/
+    background-size: contain;
+  
+}
+
+/* замість цієї "icon" існують псевдоелементи, прибираємо клас: .button > .icon */
+/*.button > .icon {
+    display: inline-block;
+    width: ;
+    height: ;
+    margin-right: ; 
+    /** background-color: blue; **
+    outline:  1px solid black;
+    background-image: url("../images/");
+    background-size: contain;
+} 
+*/
+
+/*
+.button > .item { * для використання псевдоелементів, замість клас: .button > .icon  *
+    width: ;
+    height: ;
+    margin-right: ; 
+    background-image: url("../images/");
+    background-size: contain;
+}
+*/
+
+.list {
+display: flex;
+padding: 0;
+list style: none;
+}
+
+.list-item {
+width: ;
+margin: ;
+padding: ;
+border-radius: ;
+box-shadow: ;
+}
+
+/*** блок пристосовуєм на всю ширину, */
+.list-item::before {
+/*   display: inline-block;
+   content: '' ;   *обовязкова властивысть псевдоелемента, для йоно створення досить залишити пустим* 
+    width: ;
+    height: ;    
+    margin-right: ;  ** margin-left: ; **
+    outline: 1px solid red;
+} 
+/* попередній блок пристосовуєм на всю ширину, вказавши */
+   display: inline-block;
+   content: '' ;   /*обовязкова властивысть псевдоелемента, для йоно створення досить залишити пустим*/ 
+   height: ;    
+   outline: 1px solid red;
+   background-image: url("../images/"); /*фонове зображення*/
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-color: blue;
+} 
+/*** щоб продовжувати вставляти icon є 2 підходи ввести клас (це найкраще): .icon-delivery або робити через nth-child */
+/*  .list-item:nth-child(1)::before {
+background-image: url("../images/....png");
+}
+.list-item:nth-child(2)::before {
+background-image: url("../images/....svg");
+}   */
+.list-item .icon-delivery::before {
+  ackground-image: url("../images/...delivery.png");  
+}
+.icon-mobile::before {
+  ackground-image: url("../images/...mobile.svg");
+
+
+..list-item > .title {
+    margin-top: ;
+}
+..list-item > .text {
+    margin-top: ;
+}
+
+.link {
+    display: inline-block;
+    height: ;
+    width: ;
+     background-image: url("../images/"); /*фонове зображення*/
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-color: blue;
+   border-radius: 50% ;
+}
