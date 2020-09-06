@@ -8,9 +8,10 @@
 
   --secondary-bckgr-color: #2f303a;
   --secondary-grey-color: rgba(255, 255, 255, 0.6);
+ --soc-icon-grey-color:  rgba(255, 255, 255, 0.1);
   --secondary-blacK-color: #000000;
   --button-bckgr-color: #f5f4fa;
- 
+  --soc-icon-color: #AFB1B8;
 }
 
 
@@ -44,76 +45,118 @@ img {
   max-width: 100%;
   height: auto;
 }
+a {
+  text-decoration: none;
+}
+
+/*{ display: inline-block; /Превращает любой элемент в строчный, простой  текст */
+
+/**** Site-nav  */
+.menu-nv {
+  display: flex;
+  height: 80px;
+  align-items: center;
+}
 
 .list {
   padding: 0; /* або пройтись через ліву крайню кнопку в F12 */
   margin: 0; /* або пройтись через ліву крайню кнопку в F12 */
-  font-size: 0; /*задаємо в батьківский елемент ul */
+           
   /* class для сброса стиля, например, точек при uL 
   и link для можно так же. M.2,Веб.З: 1.42.20 */
   list-style: none; 
 }
 
-.header-nav {
-  display: inline-block; /*щоб розвернути в горизонталь і запрацювали  padding горизонталі */
-  padding-left: 15px;
-  padding-right: 15px;
-
-  text-align: center;
-  border-style: solid;
-/*  color: orange; */
-}
-
-.parents-btn {
-  display: flex;
-
-  align-items: center;
-  justify-content: ;
-}
 /* logo */
 .logo {
-      margin-right: 93px;
+  display: inline-flex;
   color: var(--accent-color);
-
   font-family: Raleway, cursive;
   font-size: 26px;
   line-height: 1.19;
   /* identical to box height */
   letter-spacing: 0.03em;
   text-decoration: none; /*праює тільки зі ссилками*/
-}
+ }
+
 .logo-black {
+  margin-right: 93px; 
   color: var(--secondary-blacK-color);
 }
 
+.site-nav .link,
+.aus-nav .link {
+  display: block;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
-/*{ display: inline-block; /Превращает любой элемент в строчный, простой  текст */
+  color: var(--title-text-color);
 
-/* Site-nav  */
-.site-nav,
-.aus-nav {
-  display: flex;
-  
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.middle-topline { /*вертикаль*/
-  padding-top: 32px; 
-  padding-bottom: 32px; 
-  }
-.edge-topline { /*вертикаль*/
-  margin-left: auto;
-  padding-top: 32px; 
-  padding-bottom: 32px;  
-}
 /* очистка крайньої геометрії, 3-й варіант*/
 .site-nav .li-site-nav + .li-site-nav,
 .aus-nav .li-aus-nav + .li-aus-nav {
- margin-left: 50px; 
+  margin-left: 50px; 
+}
+/***  контакти:іконки mail- tel ***/
+/* svg */
+.flexbox{
+  display:flex;
+
+  /*  ссилка <a> */
+ /* background-color: var(--soc-icon-grey-color);*/
+}
+.cnts-e-icon {
+  fill: var(--secondary-bckgr-color);
+  margin-right:10px;
+}
+.cnts-s-icon {
+  fill: var(--secondary-bckgr-color);
+  margin-right:10px;
+   /* іконка <svg> */
 }
 
+svg .link  {
+  display: flex; /* зняти зазор перед елементом справа (для inline block - не застосовується) */
+  width: 16px;
+  height: 12px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+
+  fill: var(--accent-color);
+}
+svg .links  {
+  display: flex; /* зняти зазор перед елементом справа (для inline block - не застосовується) */
+  width: 10px;
+  height: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+
+  fill: var(--accent-color);
+}
+
+.li-aus-nav:hover svg,
+.li-aus-nav:focus {
+  fill: var(--accent-color);
+}
+/* end */
+
+
+.site-nav {
+  display: inline-flex;
+  color: var(--primary-text-color);
+}
+.aus-nav {
+  display: inline-flex;
+  margin-left: auto;
+}
 /*
 .li-site-nav { 
 /*outline: 1px solid rebeccapurple;
@@ -138,39 +181,34 @@ img {
 */
 
 .site-nav .link .current {
-      padding-top: 32px; 
-      padding-bottom: 32px;  
-  display: block;  /* зняти зазор перед елементом справа (для inline block - не застосовується)*/
-  
-  color: var(--accent-color); /* ввели альтернативний колір на клік*/
-}
-.site-nav a {
-  /*або .site-nav .link */
-  color: var(--primary-text-color);
-  text-decoration: none; /*праює тільки зі ссилками*/
+  display: block; /* зняти зазор перед елементом справа (для inline block - не застосовується)*/
+  color: var(--accent-color);
 }
 .site-nav .link:hover,
-.site-nav .link:focus,
+.site-nav .link:focus {
+  color: var(--accent-color);
+  text-decoration: none; /*праює тільки зі ссилками*/
+}
+/*aus-nav*/
 .aus-nav .link:hover,
 .aus-nav .link:focus {
-  /*ефект наведення M.2,Веб.З: 1.47.20 */
   color: var(--accent-color);
 }
 
-/*aus-nav*/
-/* aus  rgba(255, 255, 255, 0.6) */
-.aus-nav a {
-  color: var(--title-text-color);
-  text-decoration: none; /*праює тільки зі ссилками*/
-}
+
+
 
 /* main */
 
-/*footer background #2F303A*/
-.adr {
+
+
+
+/*  footer  для portfolio */
+.flexbox {
   display: flex;
-  flex-direction: column;
 }
+/*footer background #2F303A*/
+
 footer {
      /*  центрування  */
     /*margin: 0 auto;*/
@@ -180,19 +218,22 @@ footer {
   margin-bottom: 0;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 60px;
-padding-bottom: 60px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   background-color: var(--secondary-bckgr-color);
   color: var(--primary-white-color);
 }
+.li-adr {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 277px;
+}
 /* logo */
-
 .logo-white {
   color: var(--primary-white-color);
 }
-
 /* address */
-address {
+.address {
   margin-top: 20px;
   font-style: normal;
   font-weight: 400;
@@ -200,15 +241,108 @@ address {
   line-height: 1.71; /* or 171% */
   letter-spacing: 0.03em;
 }
-
 .aus-footer {
+  display: block;
   margin-top: 9px; 
   color: var(--secondary-grey-color);
-  text-decoration: none; /*праює тільки зі ссилками*/
+  direction: column;
 }
-
 .aus-footer:hover,
 .aus-footer:focus {
   /*ефект наведення M.2,Веб.З: 1.47.20 */
   color: var(--accent-color);
 }
+.li-soccontact{
+ padding-top: 75px;
+ padding-bottom: 97px;
+ width: 277px;
+ justify-content: flex-start 
+} 
+.soccontact-title {
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.45;
+letter-spacing: 0.03em;
+color: var(--primary-white-color);
+
+}
+
+
+/***  контакти  mail -tel ***/
+.cnts-icon-list {
+  display: flex;
+}
+.cnts-icon-item:not(:last-child) {
+  margin-right: 10px;
+}
+.cnts-e-icon {
+  height: 16px;
+  width: 12px;
+  fill: var(--soc-icon-color); /* перед цим з sprite.svg видалити fill */
+}   
+.cnts-s-icon {
+  height: 10px;
+  width: 16px;
+  fill: var(--soc-icon-color); /* перед цим з sprite.svg видалити fill */
+}   
+.cnts-icon-link {
+    display: flex;
+    align-items: center;
+}
+.cnts-icon-link {
+  background-color: var(--primary-white-color);
+ }
+.cnts-icon-item .cnts-icon-link:hover .cnts-icon {
+ fill: var(--accent-color);
+}
+
+
+
+/***  сщціальні  компоненти  ***/
+
+.soc-icon-list {
+  /* позиціонуємо елементи <ul>  в ряд, Практ. №8 1.50.59 */
+  display: flex;
+  justify-content: center;
+}
+.soc-icon-item:not(:last-child) {
+  /* елементи <li> */
+  margin-right: 10px;
+}
+.soc-icon {
+  /* іконка <svg>*/
+  height: 20px;
+  width: 20px;
+  fill: var(--button-bckgr-color); /* перед цим з sprite.svg видалити fill */
+}
+.soc-icon-link {
+  /* ссилка <a> */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--soc-icon-grey-color);
+  /*  background-color: var(--primary-white-color); */
+}
+.soc-icon-link:hover {
+  /* задаємо колір на ссилку при hover, Практ. №8 2.04.20  */
+  background-color: var(--accent-color);
+}
+.soc-icon-item .soc-icon-link:hover .soc-icon {
+  /* hover на ссилку */
+  fill: var(--primary-white-color);
+}
+
+/*  .soc-icon {
+ fill: var(--accent-color);
+} */
+
+
+
+
+ 

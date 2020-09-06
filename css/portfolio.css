@@ -1,10 +1,18 @@
-/* прцюємо у VSC паралельно в двох колонках */
 /* Боаузер читає зправа наліво !!!   */
 
 /* body {
   background-color: #ffffff;
   color: #212121;} --*/
 /* button - Системи кнопок M.2,Веб.З: 2.09.40 */
+.general {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  /*outline: 2px solid tomato; /* слой */
+  /*border: 2px none; var(--button-bckgr-color); /* Убираем границу */
+  /*border: 2px solid var(--button-bckgr-color);*/
+  background-color: var(--primary-white-color);
+}
+
 .filter-btn {
   display: flex;
   margin-top: 0;
@@ -15,8 +23,9 @@
 }
 .topline {
   /*вертикаль */
-  padding-top: 94px;
-  padding-bottom: 50px;
+
+  margin-top: 0px;
+  margin-bottom: 50px;
 }
 .describe-btn button {
   border-radius: 4px;
@@ -58,47 +67,55 @@ border: 1px solid black; */
 /* main */
 .section-dcrtn {
   margin: 0;
-  
+
   /*border-style: solid var(--secondary-bckgr-color);*/
   /*background-color: teal;*/
 }
 .ul-dcrtn {
   display: flex; /*багатострочний flex контейнер для ul*/
   flex-wrap: wrap; /*перенос li-елементів строки*/
- /* vertical-align: 0%;*/
+  /* vertical-align: 0%;*/
   /* align-items: center; */
   /* justify-content: center;  /створює проблему пустого місця*/
   /* max-lines: ; */
   /* background-color: teal;*/
   align-items: center;
-  padding-bottom: 64px; /* 94pх -30рх (plastyr) = 64рх */
+
   max-lines: ;
   block-size: 0%;
 }
 .ul-dcrtn .block-li {
-  width: calc((100% - 3 * 30px) / 3) /* НЕ ПРАЦЮЮТЬ */
-  /*width: calc(100% - (3 * 30px) / 4);*/
-/*vertical-align: top;*/
-  margin-bottom: 30px;
-  margin-right: 24px;
+  width: calc((100% - 30px * 2) / 3);
+  /*vertical-align: top;*/
+  margin-right: 30px;
 
   /* padding-bottom: 94px; */
   /*background-color: lightcoral;*/
 }
 /* структурні псевдокласи */
 .block-li:nth-child(3n) {
-  margin-right: 0px; 
-  /* зносимо правий margin у 4-го елемента */
+  margin-right: 0px;
+  /* зносимо правий margin у 3-го елемента */
 }
+.ul-dcrtn .block-li::nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+} /* зносимо нижні margin у 3-х останніх елементів */
 
-.block-lu:nth-child(-n ) {
-  margin-bottom: 30px; } /* зносимо нижні margin у 4-х останніх елементів */
+.block-li:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+} /* зносимо нижні margin у 3-х останніх елементів */
 
+/*.block-li {
+ margin-bottom: 30px; 
+}*/
+.block-li:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+} /* зносимо нижні margin у 3-х останніх елементів */
 
 /* структурні псевдокласи */
 /*.block-li:nth-child(3n) {
   margin-right: 0px; /* зносимо правий margin у 4-го елемента */
-    /*
+/*
 .ul-dcrtn .block-li:nth-last-child(-n + 3){
   margin-bottom: 0px; }/* зносимо нижні margin у 4-х останніх елементів */
 
@@ -114,26 +131,26 @@ border: 1px solid black; */
 /*.ul-dcrtn .block-li + .block-li {
   margin-left: 0px;} /* дати по 8рх мiж елементами вліво */
 
-
-
 .outline-main {
   /* рамка */
-  
+
   /* outline: 2px solid tomato; */
   border: 2px solid var(--button-bckgr-color);
   padding: 0;
- 
+
   /*  float: left; */
 }
-a {text-decoration: none;
-}
 
+.card-title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0;
+}
 
 .name-work {
   margin: 0;
-  margin-left: 24px;
-  margin-right: 24px;
-  margin-top: 30px;
   color: var(--primary-text-color);
 
   font-weight: 700;
@@ -143,27 +160,24 @@ a {text-decoration: none;
 }
 
 .type-work {
-
-  margin-left: 24px;
-  margin-right: 24px;
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   color: var(--title-text-color);
-  
 
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87; /* identical to box height, or 187% */
   letter-spacing: 0.03em;
 }
-.plastyr {
-  margin: 0;
-  /*outline: 2px solid tomato; /* слой */
-  /*border: 2px none; var(--button-bckgr-color); /* Убираем границу */
-    
-  /*border: 2px solid var(--button-bckgr-color);*/
+/*.plastyr {
+  margin: 0; 
   background-color: var(--primary-white-color);
-  padding-bottom: 30px;
+  padding-bottom: 30px;}*/
+/*outline: 2px solid tomato; /* слой */
+/*border: 2px none; var(--button-bckgr-color); /* Убираем границу */
+
+/*border: 2px solid var(--button-bckgr-color);*/
+
 /*
 .describe-work {
   color: var(--title-text-color);
@@ -171,7 +185,7 @@ a {text-decoration: none;
   font-size: 14px;
   line-height: 1.71; 
   letter-spacing: 0.03em;
-}
+
 */
 
 /* filter nav 
