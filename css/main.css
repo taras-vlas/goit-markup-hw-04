@@ -29,8 +29,8 @@ h1 {
   outline: 1px, solid, blacK;
   background-image: linear-gradient(
       to right,
-      rgba(52, 62, 80, 0.7),
-      rgba(48, 48, 75, 0.9)
+      rgba(33, 38, 48, 0.5),
+      rgba(23, 23, 46, 0.3)
     ),
     url("../images/main/main-jpeg.jpg");
   background-position: center;
