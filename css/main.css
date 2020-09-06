@@ -279,7 +279,7 @@ p {
 }
 .staff-pr {
   padding-top: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .staff-title {
@@ -311,6 +311,7 @@ p {
   /* позиціонуємо елементи <ul>  в ряд, Практ. №8 1.50.59 */
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }
 .soc-icon-item:not(:last-child) {
   /* елементи <li> */
