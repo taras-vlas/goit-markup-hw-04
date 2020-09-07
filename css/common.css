@@ -103,7 +103,7 @@ a {
 .aus-nav .li-aus-nav + .li-aus-nav {
   margin-left: 50px; 
 }
-/***  контакти:іконки mail- tel ***/
+/***  контакти:іконки mail-tel ***/
 /* svg */
 .flexbox{
   display:flex;
@@ -111,15 +111,19 @@ a {
   /*  ссилка <a> */
  /* background-color: var(--soc-icon-grey-color);*/
 }
+
 .cnts-e-icon {
-  fill: var(--secondary-bckgr-color);
-  margin-right:10px;
-}
+  width: 16px;
+  height: 12px;
+   margin-right:10px;
+  fill: var(--soc-icon-color); /* перед цим з sprite.svg видалити fill */
+}   
 .cnts-s-icon {
-  fill: var(--secondary-bckgr-color);
-  margin-right:10px;
-   /* іконка <svg> */
-}
+  width: 10px;
+  height: 16px;
+   margin-right:10px;
+  fill: var(--soc-icon-color); /* перед цим з sprite.svg видалити fill */
+}   
 
 svg .link  {
   display: flex; /* зняти зазор перед елементом справа (для inline block - не застосовується) */
@@ -203,7 +207,7 @@ svg .links  {
 
 
 
-/*  footer  для portfolio */
+/*  footer,  для portfolio, index */
 .flexbox {
   display: flex;
 }
@@ -267,39 +271,7 @@ font-size: 14px;
 line-height: 1.45;
 letter-spacing: 0.03em;
 color: var(--primary-white-color);
-
 }
-
-
-/***  контакти  mail -tel ***/
-.cnts-icon-list {
-  display: flex;
-}
-.cnts-icon-item:not(:last-child) {
-  margin-right: 10px;
-}
-.cnts-e-icon {
-  height: 16px;
-  width: 12px;
-  fill: var(--soc-icon-color); /* перед цим з sprite.svg видалити fill */
-}   
-.cnts-s-icon {
-  height: 10px;
-  width: 16px;
-  fill: var(--soc-icon-color); /* перед цим з sprite.svg видалити fill */
-}   
-.cnts-icon-link {
-    display: flex;
-    align-items: center;
-}
-.cnts-icon-link {
-  background-color: var(--primary-white-color);
- }
-.cnts-icon-item .cnts-icon-link:hover .cnts-icon {
- fill: var(--accent-color);
-}
-
-
 
 /***  сщціальні  компоненти  ***/
 
