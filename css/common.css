@@ -116,52 +116,67 @@ a {
   color: var(--accent-color);
   text-decoration: none; /*праює тільки зі ссилками*/
 }
-/***  контакти:іконки mail-tel ***/
+
+
+/* контакти:іконки mail-tel */
 /* svg */
-.flexbox{
-  display: flex;
-   /*  ссилка <a> */
- /* background-color: var(--soc-icon-grey-color);*/
+
+.cnts-e-icon {        /* <swg> */
+  margin-right: 10px;
+  /*width: 16px;
+  height: 12px;*/
+  fill: var(--primary-text-color);
+
 }
-.cnts-s-icon,
-.cnts-e-icon {
-  margin-right:10px;
-  fill: var(--title-text-color); /* перед цим з sprite.svg видалити fill */
-}   
- 
-.aus-nav {     /* <ul> */
+.e-mail {             /* <a> */
   display: flex;
-  margin-left: auto;
+  align-items: center;
 }
 
-.flexbox .link  {
-  display: flex; /* зняти зазор перед елементом справа (для inline block - не застосовується) */
-/*  width: 16px;
-  height: 12px;*/
+.cnts-s-icon {        /* <swg> */
+  margin-right:10px;   
+  /*width: 10px;
+  height: 16px;*/
+  fill: var(--title-text-color); /* перед цим з sprite.svg видалити fill */
+}   
+.smartphon {            /* <a> */
+  display: flex;
+  align-items: center;
+}
+
+.mail-smartf {    /* <li>  */
+  display: flex;  
+  align-items: center; 
+ /* background-color: var(--soc-icon-grey-color);*/
+ }
+
+.mail-smartf .link  {
+  display: flex;   зняти зазор перед елементом справа (для inline block - не застосовується) */
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
 }
-.aus-nav .flexbox + .flexbox {  
+.aus-nav {     /* <ul> */
+  display: flex;
+  margin-left: auto;
+}
+.aus-nav .mail-smartf + .mail-smartf {    /* <li>  */
   margin-left: 30px;
 }
 
-/*aus-nav*/
-.aus-nav .link .current-e {
-  display: flex; /* зняти зазор перед елементом справа (для inline block - не застосовується)*/
-  color: var(--accent-color);
+.aus-nav .e-mail:hover .cnts-e-icon,
+.aus-nav .smartphon:hover .cnts-s-icon {
   fill: var(--accent-color);
 }
-
-.link:hover,
-.link:focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
-}   
+.aus-nav .e-mail:hover, 
+.aus-nav .e-mail:focus, 
+.aus-nav .smartphon:hover,
+.aus-nav .smartphon:focus {
+ color: var(--accent-color);
+}
 
 
 /* main */
-
 
 
 
@@ -279,6 +294,3 @@ letter-spacing: 0.03em;
 } */
 
 
-
-
- 
