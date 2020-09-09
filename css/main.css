@@ -13,16 +13,11 @@ h1 {
 }
 
 .hero {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 15px;
-  padding-right: 15px;
-
   /* height: 600px; центрування  margin: 0 auto; */
   margin-left: auto;
   margin-right: auto;
   padding-top: 200px;
-  padding-bottom: 280px;
+
   text-align: center; /*від цього елемента унаслідує .hero-title та .button */
   max-width: 1600px;
   height: 600px;
@@ -279,7 +274,6 @@ p {
 }
 .staff-pr {
   padding-top: 30px;
-  margin-bottom: 16px;
 }
 
 .staff-title {
@@ -296,7 +290,7 @@ p {
 
 .staff-p {
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 16px;
   text-align: center; /*від цього елемента унаслідує  */
   color: var(--title-text-color);
 
@@ -310,7 +304,8 @@ p {
 .soc-icon-list {
   /* позиціонуємо елементи <ul>  в ряд, Практ. №8 1.50.59 */
   display: flex;
-  width: calc(100% - 30px * 5) / 6;
+  /*
+  width: calc(100% - 30px * 5) / 6; */
   justify-content: center;
   padding-bottom: 30px;
 }

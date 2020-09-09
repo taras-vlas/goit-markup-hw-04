@@ -8,10 +8,11 @@
 
   --secondary-bckgr-color: #2f303a;
   --secondary-grey-color: rgba(255, 255, 255, 0.6);
- --soc-icon-grey-color:  rgba(255, 255, 255, 0.1);
+  --soc-icon-grey-color:  rgba(255, 255, 255, 0.1);
   --secondary-blacK-color: #000000;
   --button-bckgr-color: #f5f4fa;
   --soc-icon-color: #AFB1B8;
+  --border-no-color: #00; /* 00 - полностью прозрачный */
 }
 
 
@@ -33,7 +34,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 
- /* outline: 2px solid tomato; /* слой */
+  /*outline: 2px solid tomato; /* слой */
   /* background-color: #fffbbb; / завжди використовуватити в роботі з container*/
 }
 
@@ -99,91 +100,13 @@ a {
   letter-spacing: 0.02em;
 }
 /* очистка крайньої геометрії, 3-й варіант*/
-.site-nav .li-site-nav + .li-site-nav,
-.aus-nav .li-aus-nav + .li-aus-nav {
-  margin-left: 50px; 
+.site-nav .li-site-nav + .li-site-nav { 
+   margin-left: 50px; 
 }
-/***  контакти:іконки mail-tel ***/
-/* svg */
-.flexbox{
-  display:flex;
-
-  /*  ссилка <a> */
- /* background-color: var(--soc-icon-grey-color);*/
-}
-
-.cnts-e-icon {
-  width: 16px;
-  height: 12px;
-   margin-right:10px;
-  fill: var(--soc-icon-color); /* перед цим з sprite.svg видалити fill */
-}   
-.cnts-s-icon {
-  width: 10px;
-  height: 16px;
-   margin-right:10px;
-  fill: var(--soc-icon-color); /* перед цим з sprite.svg видалити fill */
-}   
-
-svg .link  {
-  display: flex; /* зняти зазор перед елементом справа (для inline block - не застосовується) */
-  width: 16px;
-  height: 12px;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  align-items: center;
-
-  fill: var(--accent-color);
-}
-svg .links  {
-  display: flex; /* зняти зазор перед елементом справа (для inline block - не застосовується) */
-  width: 10px;
-  height: 16px;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  align-items: center;
-
-  fill: var(--accent-color);
-}
-
-.li-aus-nav:hover svg,
-.li-aus-nav:focus {
-  fill: var(--accent-color);
-}
-/* end */
-
 
 .site-nav {
   display: inline-flex;
-  color: var(--primary-text-color);
 }
-.aus-nav {
-  display: inline-flex;
-  margin-left: auto;
-}
-/*
-.li-site-nav { 
-/*outline: 1px solid rebeccapurple;
-  background-color: salmon;
-  margin-right: 50px; 
-}
-/* очистка крайньої геометрії, 2-й варіант 
-.site-nav .li-site-nav:last-child {
-  margin-right: 0px; 
-} */
-
-/*
-.li-aus-nav {
-/* outline: 1px solid red; 
-  background-color: rosybrown;
-  margin-right: 0px;
-}
-/* очистка крайньої геометрії, 1-й варіант
-.aus-nav .li-aus-nav:not(:last-child) {
-  margin-right: 50px;
-}
-*/
-
 .site-nav .link .current {
   display: block; /* зняти зазор перед елементом справа (для inline block - не застосовується)*/
   color: var(--accent-color);
@@ -193,13 +116,48 @@ svg .links  {
   color: var(--accent-color);
   text-decoration: none; /*праює тільки зі ссилками*/
 }
-/*aus-nav*/
-.aus-nav .link:hover,
-.aus-nav .link:focus {
-  color: var(--accent-color);
+/***  контакти:іконки mail-tel ***/
+/* svg */
+.flexbox{
+  display: flex;
+   /*  ссилка <a> */
+ /* background-color: var(--soc-icon-grey-color);*/
+}
+.cnts-s-icon,
+.cnts-e-icon {
+  margin-right:10px;
+  fill: var(--title-text-color); /* перед цим з sprite.svg видалити fill */
+}   
+ 
+.aus-nav {     /* <ul> */
+  display: flex;
+  margin-left: auto;
 }
 
+.flexbox .link  {
+  display: flex; /* зняти зазор перед елементом справа (для inline block - не застосовується) */
+/*  width: 16px;
+  height: 12px;*/
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+}
+.aus-nav .flexbox + .flexbox {  
+  margin-left: 30px;
+}
 
+/*aus-nav*/
+.aus-nav .link .current-e {
+  display: flex; /* зняти зазор перед елементом справа (для inline block - не застосовується)*/
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}   
 
 
 /* main */
@@ -220,24 +178,30 @@ footer {
   margin right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+/*  padding-left: 15px;
+  padding-right: 15px; */
   padding-top: 0px;
   padding-bottom: 0px;
   background-color: var(--secondary-bckgr-color);
   color: var(--primary-white-color);
 }
-.li-adr {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  width: 277px;
+.block-adr{
+  display: block;
+  direction: column;
 }
+.padd {
+padding-top: 60px;
+}
+
 /* logo */
 .logo-white {
   color: var(--primary-white-color);
 }
 /* address */
 .address {
+  padding-bottom: 60px;
+  width: 231px;
+margin-right: 70px;
   margin-top: 20px;
   font-style: normal;
   font-weight: 400;
@@ -259,38 +223,38 @@ footer {
 .li-soccontact{
  padding-top: 75px;
  padding-bottom: 97px;
- width: 277px;
+ width: 206px;
  justify-content: flex-start 
 } 
 .soccontact-title {
-  padding-top: 0;
-  margin-top: 0;
-  margin-bottom: 20px;
+margin-bottom: 20px;
 font-weight: 700;
 font-size: 14px;
 line-height: 1.45;
 letter-spacing: 0.03em;
-color: var(--primary-white-color);
+ color: var(--primary-white-color);
 }
 
 /***  сщціальні  компоненти  ***/
 
-.soc-icon-list {
+.list .fsoc-icon-list {
   /* позиціонуємо елементи <ul>  в ряд, Практ. №8 1.50.59 */
   display: flex;
-  justify-content: center;
+  justify-content: center; 
+  padding-bottom: 0; 
 }
-.soc-icon-item:not(:last-child) {
+.fsoc-icon-item:not(:last-child) {
   /* елементи <li> */
   margin-right: 10px;
 }
-.soc-icon {
+.fsoc-icon {
   /* іконка <svg>*/
   height: 20px;
   width: 20px;
   fill: var(--button-bckgr-color); /* перед цим з sprite.svg видалити fill */
+
 }
-.soc-icon-link {
+ .fsoc-icon-item .fsoc-icon-link{
   /* ссилка <a> */
   display: flex;
   justify-content: center;
@@ -301,11 +265,11 @@ color: var(--primary-white-color);
   background-color: var(--soc-icon-grey-color);
   /*  background-color: var(--primary-white-color); */
 }
-.soc-icon-link:hover {
+.fsoc-icon-link:hover {
   /* задаємо колір на ссилку при hover, Практ. №8 2.04.20  */
   background-color: var(--accent-color);
 }
-.soc-icon-item .soc-icon-link:hover .soc-icon {
+.fsoc-icon-item .fsoc-icon-link:hover .fsoc-icon {
   /* hover на ссилку */
   fill: var(--primary-white-color);
 }

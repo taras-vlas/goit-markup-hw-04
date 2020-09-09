@@ -47,36 +47,24 @@
         <!-- aus-nav, Contats -->
         <ul class="list aus-nav">
           <!-- ::  -->
-          <!-- ::  -->
-          <li class="li-aus-nav flexbox">
+          <li class="flexbox">
             <a
-              class="link"
+              class="link current-e icon-aus-nav"
               href="mailto:info@devstudio.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="ссылка E-mail"
             >
-              <svg class="cnts-e-icon">
-                <use href="../images/main/sprite-cl-gn.svg#envelope"></use>
-              </svg>
+              <svg class="cnts-e-icon" width="16 " height="12 ">
+                <use href="../images/main/sprite-cl-gn.svg#envelope"></use></svg
+              >info@devstudio.com
             </a>
-            <a class="link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
           </li>
           <li class="li-aus-nav flexbox">
-            <a
-              class="link"
-              href="tel:+380961111111"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="ссылка смартфон"
-            >
-              <svg class="cnts-s-icon">
-                <use href="../images/main/sprite-cl-gn.svg#smartphone"></use>
-              </svg>
+            <a class="link icon-aus-nav" href="tel:+380961111111">
+              <svg class="cnts-s-icon" width="10" height="16">
+                <use
+                  href="../images/main/sprite-cl-gn.svg#smartphone"
+                ></use></svg
+              >+38 (096) 111 11 11
             </a>
-            <a class="link" href="tel:+380961111111">+38 (096) 111-11-11</a>
           </li>
         </ul>
       </div>
@@ -302,10 +290,11 @@
     </main>
 
     <!-- Подвал страницы -->
-    <footer class="container">
-      <ul class="list flexbox">
-        <li class="li-adr">
-          <a href="../" lang="en" class="logo"
+    <footer>
+      <div class="container flexbox">
+        <!-- Адрес и контакты -->
+        <div class="block-adr">
+          <a href="../" lang="en" class="logo padd"
             >Web<span class="logo-white">Studio</span></a
           >
           <address class="address">
@@ -314,70 +303,83 @@
               >info@exempl.com</a
             >
             <a href="tel:+380961111111" class="aus-footer"
-              >+38 (096) 111-11-11</a
+              >+38 (096) 111 11 11</a
             >
           </address>
-        </li>
-        <li class="li-soccontact">
-          <h2 class="soccontact-title">ПРИСОЕДИНЯЙТЕСЬ</h2>
-          <div class="flexbox">
-            <ul class="list soc-icon-list">
-              <li class="soc-icon-item">
-                <a
-                  class="soc-icon-link"
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="ссылка Инстаграм"
-                >
-                  <svg class="soc-icon">
-                    <use href="../images/main/sprite.svg#instagram-grey"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="soc-icon-item">
-                <a
-                  class="soc-icon-link"
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="ссылка Твиттер"
-                >
-                  <svg class="soc-icon">
-                    <use href="../images/main/sprite.svg#twitter-grey"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="soc-icon-item">
-                <a
-                  class="soc-icon-link"
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="ссылка Фейсбук"
-                >
-                  <svg class="soc-icon">
-                    <use href="../images/main/sprite.svg#facebook-grey"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="soc-icon-item">
-                <a
-                  class="soc-icon-link"
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="ссылка Линкедин"
-                >
-                  <svg class="soc-icon">
-                    <use href="../images/main/sprite.svg#linkedin-grey"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
+        </div>
+        <!-- соц. контакты -->
+        <div>
+          <ul class="list flexbox">
+            <li class="li-soccontact">
+              <p class="soccontact-title">ПРИСОЕДИНЯЙТЕСЬ</p>
+              <div class="flexbox">
+                <ul class="list fsoc-icon-list">
+                  <li class="fsoc-icon-item">
+                    <a
+                      class="fsoc-icon-link"
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="ссылка Инстаграм"
+                    >
+                      <svg class="fsoc-icon">
+                        <use
+                          href="../images/main/sprite.svg#instagram-grey"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="fsoc-icon-item">
+                    <a
+                      class="fsoc-icon-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="ссылка Твиттер"
+                    >
+                      <svg class="fsoc-icon">
+                        <use
+                          href="../images/main/sprite.svg#twitter-grey"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="fsoc-icon-item">
+                    <a
+                      class="fsoc-icon-link"
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="ссылка Фейсбук"
+                    >
+                      <svg class="fsoc-icon">
+                        <use
+                          href="../images/main/sprite.svg#facebook-grey"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="fsoc-icon-item">
+                    <a
+                      class="fsoc-icon-link"
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="ссылка Линкедин"
+                    >
+                      <svg class="fsoc-icon">
+                        <use
+                          href="../images/main/sprite.svg#linkedin-grey"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
