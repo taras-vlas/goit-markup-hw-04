@@ -151,7 +151,7 @@ a {
  }
 
 .mail-smartf .link  {
-  display: flex;   зняти зазор перед елементом справа (для inline block - не застосовується) */
+  display: flex;  /* зняти зазор перед елементом справа (для inline block - не застосовується) */
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
